@@ -22,9 +22,11 @@ public class QuickSort3 {
 			for (int j = l; j <= r; j++) {
 				if (array[j] <= x) {
 					i++;
-					int temp = array[i];
-					array[i] = array[j];
-					array[j] = temp;
+					if (i != j) {
+						int temp = array[i];
+						array[i] = array[j];
+						array[j] = temp;
+					}
 				}
 			}
 			sort(array, l, i - 1);
